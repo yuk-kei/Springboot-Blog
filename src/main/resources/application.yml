@@ -1,0 +1,21 @@
+server:
+  port: 3000
+  error:
+    include-message: always
+
+spring:
+  datasource:
+    url: jdbc:postgresql://128.195.151.182:5433/customer
+    username: admin
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: none # create-drop, so that the database is dropped and created every time the application is started
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect # PostgreSQLDialect, so that Hibernate generates the correct SQL statements for the chosen database
+        format_sql: true
+    show_sql: true
+  main:
+    web-application-type: servlet
+
